@@ -139,8 +139,8 @@ void Menu(Customer &ob)
 	 cout<<"1. Double Down Burgers"<<endl;
 	 cout<<"2. 5 in 1 Special Treat"<<endl;
 	 cout<<"3. Veg Masti"<<endl;
-	 cout<<"4. Chicken Burger"<<endl;
-	 cout<<"5. Chicken Zinger"<<endl;
+	 cout<<"4. Aloo tikki Burger"<<endl;
+	 cout<<"5. Veg Zinger"<<endl;
 	 cout<<"Choose any one of the following ";
 	 cin>>choice;
 	 switch(choice)
@@ -161,12 +161,12 @@ void Menu(Customer &ob)
 	    break;
 
 	    case 4:
-	    strcpy(ob.sub_category[i],"Chicken Burger");
+	    strcpy(ob.sub_category[i],"Aloo tikki Burger");
 	    ob.price[i] = 100;
 	    break;
 
 	    case 5:
-	    strcpy(ob.sub_category[i],"Chicken Zinger");
+	    strcpy(ob.sub_category[i],"Veg Zinger");
 	    ob.price[i] = 120;
 	    break;
 	 }
@@ -212,7 +212,7 @@ void Menu(Customer &ob)
 	 case 4:
 	 cout<<"1. Boneless Stripes"<<endl;
 	 cout<<"2. Hot Chicken Wings"<<endl;
-	 cout<<"3. Hot And Crispy Chicken"<<endl;
+	 cout<<"3. Paneer Tikka"<<endl;
 	 cout<<"4. Large Popcorn"<<endl;
 	 cout<<"5. Veg Stripes"<<endl;
 	 cout<<"6. Chicken Heaven"<<endl;
@@ -231,7 +231,7 @@ void Menu(Customer &ob)
 	    break;
 
 	    case 3:
-	    strcpy(ob.sub_category[i],"Hot And Crispy Chicken");
+	    strcpy(ob.sub_category[i],"Paneer Tikka");
 	    ob.price[i] = 120;
 	    break;
 
@@ -257,7 +257,7 @@ void Menu(Customer &ob)
 	 case 5:
 	 cout<<"1. Chicken Hawaiian Pizza"<<endl;
 	 cout<<"2. Chicken Fiestal"<<endl;
-	 cout<<"3. Barbeque Chicken Pizza"<<endl;
+	 cout<<"3. Pepper Paneer Pizza"<<endl;
 	 cout<<"4. Zesty Chicken"<<endl;
 	 cout<<"5. Seventh Heaven"<<endl;
 	 cout<<"6. Chicken Golden Delight"<<endl;
@@ -279,7 +279,7 @@ void Menu(Customer &ob)
 	    break;
 
 	    case 3:
-	    strcpy(ob.sub_category[i],"Barbeque Chicken Pizza");
+	    strcpy(ob.sub_category[i],"Pepper Panner Pizza");
 	    ob.price[i] = 450;
 	    break;
 
@@ -323,7 +323,7 @@ void Menu(Customer &ob)
 	 cout<<"2. Fried Rice with Prawn"<<endl;
 	 cout<<"3. Fried Rice with Veg Delux"<<endl;
 	 cout<<"4. Chicken Biriyani"<<endl;
-	 cout<<"5. Mutton Biriyani"<<endl;
+	 cout<<"5. Hydrebadi Biriyani"<<endl;
 	 cout<<"6. Special Biriyani"<<endl;
 	 cout<<"Choose any one of the following ";
 	 cin>>choice;
@@ -350,7 +350,7 @@ void Menu(Customer &ob)
 	    break;
 
 	    case 5:
-	    strcpy(ob.sub_category[i],"Mutton Biriyani");
+	    strcpy(ob.sub_category[i],"Hydrebadi Biriyani");
 	    ob.price[i] = 400;
 	    break;
 

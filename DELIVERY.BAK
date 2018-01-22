@@ -58,7 +58,7 @@ void Outlet(Order ob)
       case 8:   strcpy(ob.outlet, "ITC");           break;
       default:
 	 cout<<"This restraurant is not in our list"<<endl;
-	 cout<<"We will try to deliver the order"<<endl;
+	 cout<<"Please select another outlet"<<endl;
 	 cout<<"Enter the name of the retraurant"<<endl;
 	 gets(ob.outlet);
    }
@@ -367,7 +367,7 @@ void Menu(Order ob)
 	 cout<<"4. Alphonso Burst"<<endl;
 	 cout<<"5. Cafe Cuba"<<endl;
 	 cout<<"6. Red Bull"<<endl;
-	 cout<<"7. Pepsi"<<endl;
+	 cout<<"7. Diet cola"<<endl;
 	 cout<<"Choose any one of the following"<<endl;
 	 cin>>choice;
 	 switch(choice)
@@ -403,7 +403,7 @@ void Menu(Order ob)
 	    break;
 
 	    case 7:
-	    strcpy(ob.sub_category[i],"Pepsi");
+	    strcpy(ob.sub_category[i],"Diet cola");
 	    ob.price[i] = 40;
 	    break;
 	 }
@@ -426,11 +426,6 @@ void Menu(Order ob)
    }
    while(cond == 'y' || cond == 'Y');
 }
-
-void Discount(Order ob)
-{
-}
-
 void Calculate(Order ob)
 {
    for(int i = 0; i < ob.number; i++)
@@ -441,6 +436,14 @@ void Calculate(Order ob)
    Discount(ob);
    ob.net = ob.gross + SGST + CGST + cess - ob.discount;
    cout<<ob.net;
+}
+void discount(int price) 
+{ 
+cout<<"Congragulations you are eligible for a special discount";
+cout<<"As you are wiyhin our first 100 customers we give you a 10% discount";
+price/=0.9;
+cout<<"The new price is:";
+cout<<price;
 }
 
 void Terms()
@@ -478,5 +481,7 @@ void main()
    Outlet(c.o);
    Menu(c.o);
    Calculate(c.o);
+   discount(ob.net);
    cout<<c.o.number;
+   getch();
 }
